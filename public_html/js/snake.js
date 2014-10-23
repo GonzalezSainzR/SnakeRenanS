@@ -135,10 +135,10 @@ function setFoodPosition() {
 function keyboardHandler(event) {
     console.log(event);
     
-    if(event.keycode == "39") {
+    if(event.keyCode == "39" && snakeDirection != "left") {
         snakeDirection = "right";
     }
-    else if(event.KeyCode == "40") {
+    else if(event.keyCode == "40" && snakeDirection != "up") {
         snakeDirection = "down";
     }
 }
