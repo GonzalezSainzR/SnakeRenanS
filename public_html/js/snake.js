@@ -101,7 +101,8 @@ function snakeUpdate () {
         snakeHeadY--;
     }
     
-    checkFoodCollisions();
+    checkFoodCollisions(snakeHeadX, snakeHeadY);
+    checkWallCollisions(snakeHeadX, snakeHeadY);
     
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
@@ -156,8 +157,29 @@ function keyboardHandler(event) {
         snakeDirection = "up";
     }
 }
-function checkFoodCollisions() {
-  if(snakeHead == food.x && snakeHeadY == food.y) {
-      console.log("Food Collision");
+
+/*-----------------------------------------------------------------------------
+ * Collision Handling
+ * ----------------------------------------------------------------------------
+ */
+
+function checkFoodCollisions(snakeHeadX, snakeHeadY) {
+  if(snakeHeadX == food.x && snakeHeadY == food.y) {
+      snake.push({
+          x:0,
+          y:0
+      });
+      snakeLength++;
+      
+    var randomX = Math.floor(Math.random() * screenWidth);
+    var randomY = Math.floor(Math.random() * screenHeight);
+    
+    food.x = Math.floor(randomX / snakeSize);
+    food.y = Math.floor(randomY / snakeSize);
   }
+}
+function checkWallCollisions(snakeHeadX,snakeHeadY) {
+    if (snakeHeadX * snakeSize >= screenWidth) {
+        console.log("Wall Collision");
+    }
 }
