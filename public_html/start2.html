@@ -1,4 +1,33 @@
-/*-----------------------------------------------------------------------------
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Snake - Normal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/konami.js" type="text/javascript"></script>
+        <link  type="text/css" rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <section id="playHUD">
+            <h2 id="scoreboard">Length</h2>
+        </section>
+        
+        <section id="gameOver">
+            <h1 class="title">GAME OVER!</h1>
+            <h3 id="restartButton">Restart?</h3>
+            <a href="index.html"><h3 id="backToMenu" >Back to menu</h3></a>
+        </section>
+        
+        <canvas id="game-screen"></canvas>
+        <script type="text/javascript">
+            /*-----------------------------------------------------------------------------
  * Variables
  * ----------------------------------------------------------------------------
  */
@@ -31,7 +60,7 @@ var scoreboard;
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval(gameLoop, 1000 / 20);
+setInterval(gameLoop, 1000 / 30);
 
 /*-----------------------------------------------------------------------------
  * Game Functions
@@ -258,7 +287,7 @@ function showMenu(state) {
 
 function centerMenuPosition(menu) {
     menu.style.top = (screenHeight / 2) - (menu.offsetHeight / 2) + "px";
-    menu.style.left = (screenWidth / 2) - (menu.offsetWidth / 1.2) + "px";
+    menu.style.left = (screenWidth / 2) - (menu.offsetWidth / 2) + "px";
 }
 
 function drawScoreboard() {
@@ -266,3 +295,9 @@ function drawScoreboard() {
     /*Cannot set property 'innerHTML' of null ???*/
     /*              Update: Fixed error          */
 }
+        </script>
+        <script type="text/javascript">
+            var easter_egg = new Konami('EasterEgg2.html');
+        </script>
+    </body>
+</html>

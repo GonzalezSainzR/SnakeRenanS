@@ -1,9 +1,8 @@
 body {
     margin: 0px;
-    padding: 0px;
+    padding:opx;
     text-align: center;
     background-color: rgb(87, 11, 222);
-        
 }
 
 #game-screen {
@@ -16,7 +15,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press start 2P', cursive;
     color: white;
     text-align: center;
 }
@@ -38,4 +37,31 @@ h1, h2, h3 {
 
 #scoreboard {
     margin: 0px;
+}
+
+.jumbotron {
+   background-color: rgb(87, 11, 222); 
+   text-align: center;
+}
+
+#backToMenu {
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#backToMenu:hover {
+    background-color: #000;
+}
+
+p {
+    font-family: 'Press start 2P', cursive;
+    color: #000;
+    text-align: center;
+}
+
+div {
+    border-style: none;
+    border-width: 5px;
+    padding: 20px;
+    background-color: rgb(87, 11, 222);
 }
