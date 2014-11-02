@@ -1,20 +1,20 @@
 /*Controls flashhing Background*/
 @-webkit-keyframes blink {
-        50%   { background:blue; }
-        25%  { background:white;}
-        100% { background:red; }
+        25%   { background:black; }
+        50%  { background:orangered;}
+        100% { background:black; }
 }
 @-moz-keyframes blink {
-        50%   { background:blue; }
-        25%  { background:white;}
-        100% { background:red; }
+        25%   { background:black; }
+        50%  { background:orangered;}
+        100% { background:black; }
 }
 @-ms-keyframes blink {
-        50%   { background:blue; }
-        25%  { background:white;}
-        100% { background:red; }
+        25%   { background:black; }
+        50%  { background:orangered;}
+        100% { background:black; }
 }
-body, .jumbotron{
+body, .jumbotron, pre{
      -webkit-animation: blink 1s infinite;
      -moz-animation:    blink 1s infinite;
      -ms-animation:     blink 1s infinite;
@@ -24,7 +24,6 @@ body {
     margin: 0px;
     padding:opx;
     text-align: center;
-    background-color: rgb(87, 11, 222);
 }
 
 #game-screen {
@@ -84,4 +83,10 @@ div {
     border-style: none;
     border-width: 5px;
     padding: 20px;
+}
+
+pre {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
 }
